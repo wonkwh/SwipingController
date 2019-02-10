@@ -11,6 +11,8 @@
 		89653CB4221079A5001C5C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89653CB3221079A5001C5C31 /* Assets.xcassets */; };
 		89653CB7221079A5001C5C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89653CB5221079A5001C5C31 /* LaunchScreen.storyboard */; };
 		8993E55C22107ADE0004C732 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993E55B22107ADE0004C732 /* SwipingController.swift */; };
+		8993E55E22107FE50004C732 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993E55D22107FE50004C732 /* MenuController.swift */; };
+		8993E561221084990004C732 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993E560221084990004C732 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		89653CB6221079A5001C5C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89653CB8221079A5001C5C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8993E55B22107ADE0004C732 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		8993E55D22107FE50004C732 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		8993E560221084990004C732 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,23 @@
 		89653CAB221079A4001C5C31 /* SwipingPageView */ = {
 			isa = PBXGroup;
 			children = (
+				8993E55F221084710004C732 /* Menu */,
 				89653CAC221079A4001C5C31 /* AppDelegate.swift */,
+				8993E55B22107ADE0004C732 /* SwipingController.swift */,
 				89653CB3221079A5001C5C31 /* Assets.xcassets */,
 				89653CB5221079A5001C5C31 /* LaunchScreen.storyboard */,
 				89653CB8221079A5001C5C31 /* Info.plist */,
-				8993E55B22107ADE0004C732 /* SwipingController.swift */,
 			);
 			path = SwipingPageView;
+			sourceTree = "<group>";
+		};
+		8993E55F221084710004C732 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8993E55D22107FE50004C732 /* MenuController.swift */,
+				8993E560221084990004C732 /* MenuCell.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89653CAD221079A4001C5C31 /* AppDelegate.swift in Sources */,
+				8993E55E22107FE50004C732 /* MenuController.swift in Sources */,
+				8993E561221084990004C732 /* MenuCell.swift in Sources */,
 				8993E55C22107ADE0004C732 /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

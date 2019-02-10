@@ -10,16 +10,30 @@ import UIKit
 
 class SwipingController: UICollectionViewController {
     
+    let menuController = MenuController(collectionViewLayout: UICollectionViewFlowLayout())
+    
     override func viewDidLoad() {
         
         navigationItem.title = "Paging Swipe Feature"
         
         collectionView.backgroundColor = .white
         
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let menuView = menuController.view!
         
+        view.addSubview(menuView)
+        menuView.backgroundColor = .yellow
+        menuView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44),
+            menuView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            menuView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            menuView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            menuView.heightAnchor.constraint(equalToConstant: 60)
+            ])
+
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: menuView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
