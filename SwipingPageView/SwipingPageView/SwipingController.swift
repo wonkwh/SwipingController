@@ -68,6 +68,12 @@ class SwipingController: UICollectionViewController {
             layout.itemSize = .init(width: view.frame.width, height: view.frame.height - 60 - 44 - UIApplication.shared.statusBarFrame.height)
         }
     }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let offset = x / 3
+        menuController.menuBar.transform = CGAffineTransform(translationX: offset, y: 0)
+    }
 }
 
 extension SwipingController {

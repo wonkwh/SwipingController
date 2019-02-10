@@ -14,7 +14,7 @@ class MenuController: UICollectionViewController {
     
     fileprivate let titles = ["Home", "News", "Popular"]
     
-    fileprivate let menuBar: UIView = {
+    let menuBar: UIView = {
         let bar = UIView()
         bar.backgroundColor = .black
         bar.translatesAutoresizingMaskIntoConstraints = false
