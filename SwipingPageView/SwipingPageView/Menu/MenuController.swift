@@ -14,12 +14,28 @@ class MenuController: UICollectionViewController {
     
     fileprivate let titles = ["Home", "News", "Popular"]
     
+    fileprivate let menuBar: UIView = {
+        let bar = UIView()
+        bar.backgroundColor = .black
+        bar.translatesAutoresizingMaskIntoConstraints = false
+        return bar
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = .gray
+        collectionView.backgroundColor = .white
         setupCollectionViewLayout()
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
+        
+        view.addSubview(menuBar)
+        NSLayoutConstraint.activate([
+            menuBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            menuBar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            menuBar.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3),
+            menuBar.heightAnchor.constraint(equalToConstant: 5)
+            ])
+
     }
     
     fileprivate func setupCollectionViewLayout() {
